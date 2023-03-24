@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 function Bag(props){
   return (
     <React.Fragment>
-      <h3>{props.coffee} - {props.roast} - {props.amount}</h3>
+      Type of coffe: {props.coffee} <br></br>
+      Roast: {props.roast} <br></br>
+      Amount: {props.amount} pounds
       <hr/>
     </React.Fragment>
   );
