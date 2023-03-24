@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "./Header";
-import BagList from "./BagList";
+import BagControl from "./BagControl";
+import Menu from "./Menu";
+
 
 function App(){
 
   return (
     <React.Fragment>
       <Header />
-      <BagList />
+      <Menu />
+      <BagControl />
     </React.Fragment>
   );
 }

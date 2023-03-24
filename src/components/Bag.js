@@ -1,14 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Bag(){
-  const coffee1 = "Brazilian Coffee";
-  const coffee2 = "Colombian Coffee";
+function Bag(props){
   return (
     <React.Fragment>
-      <h3>{coffee1} and {coffee2}</h3>
+      <h3>{props.coffee} - {props.roast} - {props.amount}</h3>
       <hr/>
     </React.Fragment>
   );
 }
 
-export default Ticket;
+Bag.propTypes = {
+  coffee: PropTypes.string,
+  roast: PropTypes.string,
+  amount: PropTypes.number
+};
+
+export default Bag;
