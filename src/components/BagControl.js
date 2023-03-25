@@ -23,6 +23,7 @@ class BagControl extends React.Component {
         selectedBag: null,
         editing: false
       });
+
     } else {
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
@@ -46,7 +47,7 @@ class BagControl extends React.Component {
     this.setState({editing: true});
   }
 
-  handleEditingTicketInList = (bagToEdit) => {
+  handleEditingBagInList = (bagToEdit) => {
     const editMainBagList = this.state.mainBagList
       .filter(bag => bag.id !== this.state.selectedBag.id)
       .concat(bagToEdit);
@@ -62,7 +63,7 @@ class BagControl extends React.Component {
     let buttonText = null;
 
     if (this.state.editing) {
-      currentlyVisibleState = <EditBagForm bag = { this.state.selectedBag} onEditBag = {this.handleEditingBagList} />
+      currentlyVisibleState = <EditBagForm bag = { this.state.selectedBag} onEditBag = {this.handleEditingBagInList} />
       buttonText = "Return to Bag List";
     }
    else if (this.state.selectedBag != null) {

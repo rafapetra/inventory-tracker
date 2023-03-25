@@ -12,7 +12,8 @@ function BagDetail(props){
       Amount: {bag.amount} pounds
       <hr/>
 
-      <button onClick={ props.onClickingEdit }>Update Ticket</button>
+      <button onClick={ props.onClickingEdit }>Update Bag</button>
+      
     </React.Fragment>
   );
 }

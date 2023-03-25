@@ -7,12 +7,19 @@ function EditBagForm (props) {
 
   function handleEditBagFormSubmission(event) {
     event.preventDefault();
-    props.onEditBag({coffee: event.target.coffee.value, roast: event.target.roast.value, amount: event.target.amount.value, id: bag.id});
+    props.onEditBag({      
+      coffee: event.target.coffee.value, 
+      roast: event.target.roast.value, 
+      amount: 130,
+      id: bag.id
+    });
   }
+  
   return (
     <React.Fragment>
       <ReusableForm 
-        buttonText="Update Ticket" />
+        formSubmissionHandler={handleEditBagFormSubmission} 
+        buttonText="Update Bag" />
     </React.Fragment>
   );
 }
