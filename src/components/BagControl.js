@@ -38,8 +38,19 @@ class BagControl extends React.Component {
   }
 
   handleChangingSelectedBag = (id) => {
-    const selectedBag = this.state.mainBagList.filter(bag => bag.id === id)[0];
+    const selectedBag = this.state.mainBagList.find(bag => bag.id === id);
     this.setState({selectedBag: selectedBag});
+  }
+
+  handleUpdateBagInList = (updatedBag) => {
+    const updatedMainBagList = this.state.mainBagList.map(bag => {
+      if (bag.id === updatedBag.id) {
+        return updatedBag;
+      } else {
+        return bag;
+      }
+    });
+    this.setState({mainBagList: updatedMainBagList});
   }
 
   handleEditClick = () => {
@@ -69,6 +80,7 @@ class BagControl extends React.Component {
    else if (this.state.selectedBag != null) {
       currentlyVisibleState = <BagDetail 
       bag = {this.state.selectedBag} 
+      onUpdateBag={this.handleUpdateBagInList}
       onClickingEdit = {this.handleEditClick} />
       buttonText= "Return to Bag List"
     }

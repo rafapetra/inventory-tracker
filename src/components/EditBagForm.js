@@ -10,7 +10,7 @@ function EditBagForm (props) {
     props.onEditBag({      
       coffee: event.target.coffee.value, 
       roast: event.target.roast.value, 
-      amount: 130,
+      amount: bag.amount,
       id: bag.id
     });
   }
