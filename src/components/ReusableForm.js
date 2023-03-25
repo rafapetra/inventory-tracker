@@ -6,13 +6,13 @@ function ReusableForm(props) {
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
 
-      <label for="coffee">Select Coffee Type:</label>
+      <label htmlFor="coffee">Select Coffee Type:</label>
         <select id="coffee" name="coffee">
           <option value="Brazilian">Brazilian</option>
           <option value="Colombian">Colombian</option>
         </select><br></br>
 
-        <label for="roast">Select Roast Type:</label>
+        <label htmlFor="roast">Select Roast Type:</label>
         <select id="roast" name="roast">
           <option value="Light">Light</option>
           <option value="Medium">Medium</option>

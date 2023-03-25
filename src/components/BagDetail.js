@@ -12,14 +12,15 @@ function BagDetail(props){
       Amount: {bag.amount} pounds
       <hr/>
 
-      
+      <button onClick={ props.onClickingEdit }>Update Ticket</button>
     </React.Fragment>
   );
 }
 
 
  BagDetail.propTypes = {
-  bag: PropTypes.object
+  bag: PropTypes.object,
+  onClickingEdit: PropTypes.func
 };
 
 export default BagDetail;

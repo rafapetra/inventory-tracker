@@ -2,6 +2,7 @@ import React from 'react';
 import NewBagForm from './NewBagForm';
 import BagList from './BagList';
 import BagDetail from './BagDetail';
+import EditBagForm from './EditBagForm'
 
 class BagControl extends React.Component {
 
@@ -10,7 +11,8 @@ class BagControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainBagList: [],
-      selectedBag: null
+      selectedBag: null,
+      editing: false 
     };
   }
 
@@ -18,7 +20,8 @@ class BagControl extends React.Component {
     if (this.state.selectedBag != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedBag: null
+        selectedBag: null,
+        editing: false
       });
     } else {
     this.setState(prevState => ({
@@ -38,12 +41,34 @@ class BagControl extends React.Component {
     this.setState({selectedBag: selectedBag});
   }
 
+  handleEditClick = () => {
+    console.log("handleEditClick reached!");
+    this.setState({editing: true});
+  }
+
+  handleEditingTicketInList = (bagToEdit) => {
+    const editMainBagList = this.state.mainBagList
+      .filter(bag => bag.id !== this.state.selectedBag.id)
+      .concat(bagToEdit);
+    this.setState({
+      mainBagList: editMainBagList,
+      editing: false,
+      selectedBag: null
+    });
+
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
 
-    if (this.state.selectedBag != null) {
-      currentlyVisibleState = <BagDetail bag = {this.state.selectedBag} />
+    if (this.state.editing) {
+      currentlyVisibleState = <EditBagForm bag = { this.state.selectedBag} onEditBag = {this.handleEditingBagList} />
+      buttonText = "Return to Bag List";
+    }
+   else if (this.state.selectedBag != null) {
+      currentlyVisibleState = <BagDetail 
+      bag = {this.state.selectedBag} 
+      onClickingEdit = {this.handleEditClick} />
       buttonText= "Return to Bag List"
     }
      else if (this.state.formVisibleOnPage) {
