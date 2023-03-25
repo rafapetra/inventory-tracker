@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Local Business Inventory Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that tracks inventory for a local business. It allows the user to pick one inventory item and track how much of it is remaining as it gets sold or given away. The theme for this particular application is a coffee shop that sells coffee beans.
 
-## Available Scripts
+## Component Tree
 
-In the project directory, you can run:
+App
+├── Header
+├── BagList
+│   ├── Bag
+│   ├── BagDetail
+│   └── BagForm
+└── Footer
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application has the following functionality:
 
-### `npm test`
+- As a user, I can see a list/menu of all available types of coffee beans.
+- For each item, I can see its name, origin, price, and roast (light, medium, or dark).
+- As a user, I can submit a form to add a new burlap sack of coffee to the inventory.
+- As a user, I can click on a burlap sack to see its detail page.
+- On the detail page, I can see how many pounds of coffee beans are left in the burlap sack.
+- As a user, I can click a button to sell a pound of coffee beans. This should decrease the number of pounds left by 1. The number of pounds in a sack of coffee beans should not be able to go below 0.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Run `npm install` to install the necessary dependencies.
+4. Run `npm start` to start the development server.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- PropTypes
+- CSS
 
-### `npm run eject`
+## Future Enhancements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Add DELETE functionality.
+- Implement authentication and authorization for user accounts.
+- Allow for the tracking of multiple types of inventory items, not just coffee beans.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was inspired by the Epicodus curriculum.
