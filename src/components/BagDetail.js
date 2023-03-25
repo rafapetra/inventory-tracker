@@ -11,6 +11,8 @@ function BagDetail(props){
       Roast: {bag.roast} <br></br>
       Amount: {bag.amount} pounds
       <hr/>
+
+      
     </React.Fragment>
   );
 }
