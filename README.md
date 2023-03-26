@@ -13,6 +13,8 @@ App
 └── Footer
 
 
+
+
 ## Functionality
 
 The application has the following functionality:

@@ -1,9 +1,13 @@
 import React from "react";
 import Bag from "./Bag";
 import PropTypes from "prop-types";
+import './BagList.css';
+
 
 function BagList(props){
   return (
+    <div className="bagList">
+
     <React.Fragment>
     {props.bagList.map((bag) =>
       <Bag   
@@ -14,7 +18,9 @@ function BagList(props){
       id={bag.id}
       key={bag.id} />
     )}
-  </React.Fragment>
+  </React.Fragment>    </div>
+
+
   );
 }
 

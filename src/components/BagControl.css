@@ -1,11 +1,7 @@
-.header {
+.bagControl {
   background-color: beige;
-  margin: auto;
   width: 750px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 5px;
-  order: 0;
-  width: 750px;
   padding: 10px;
-
 }

@@ -1,11 +1,9 @@
-.header {
-  background-color: beige;
+.menu {
   margin: auto;
   width: 750px;
   text-align: center;
   margin-bottom: 5px;
-  order: 0;
-  width: 750px;
+  background-color: azure;
   padding: 10px;
 
 }

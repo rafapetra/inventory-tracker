@@ -3,6 +3,7 @@ import NewBagForm from './NewBagForm';
 import BagList from './BagList';
 import BagDetail from './BagDetail';
 import EditBagForm from './EditBagForm'
+import './BagControl.css';
 
 class BagControl extends React.Component {
 
@@ -92,10 +93,14 @@ class BagControl extends React.Component {
       buttonText= "Add New Bag"
     }
     return (
+      <div className='bagControl'>
+
       <React.Fragment>
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
+      </div>
+
     );
   }
 
