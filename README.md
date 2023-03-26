@@ -4,14 +4,15 @@ This is a React application that tracks inventory for a local business. It allow
 
 ## Component Tree
 
-| App         |
-| ----------- |
-| Header      |
-| BagList     |
-| ├── Bag     |
+| App           |
+| -----------   |
+| Header        |
+| Menu          |
+| BagControl    |
+| ├── BagList   |
+| ├── Bag       |
 | ├── BagDetail |
-| └── BagForm |
-| Footer      |
+| └── BagForm   |
 
 
 ## Functionality
