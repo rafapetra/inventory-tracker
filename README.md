@@ -1,4 +1,4 @@
-# Local Business Inventory Tracker
+# Coffee Shop Inventory Tracker
 
 This is a React application that tracks inventory for a local business. It allows the user to pick one inventory item and track how much of it is remaining as it gets sold or given away. The theme for this particular application is a coffee shop that sells coffee beans.
 
